@@ -7,15 +7,15 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder
 import pickle
 import streamlit as st
 
-model = load_model(r'ann_classification\ann\model.h5')
+model = load_model(r'./model.h5')
 # load the encoders and scaler
-with open(r'ann_classification\ann\label_encoder_gender.pkl','rb') as file:
+with open(r'./label_encoder_gender.pkl','rb') as file:
     label_encoder_gender = pickle.load(file)
 
-with open(r'ann_classification\ann\one_hot_geography.pkl','rb') as file:
+with open(r'./one_hot_geography.pkl','rb') as file:
     label_encoder_geo = pickle.load(file)
 
-with open(r'ann_classification\ann\scaler.pkl','rb') as file:
+with open(r'./scaler.pkl','rb') as file:
     scaler = pickle.load(file)
 
 
